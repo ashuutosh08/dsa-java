@@ -103,6 +103,34 @@ public class pattern01 {
         }
     }
 
+// pattern 7:
+//    *
+//   ***
+//  *****
+// *******
+//*********
+//    Rule - n-i+1(space) - 2*i+1(star) - n-i+1(space): 3 loops- 1(space), 2(star), 3(space)
+
+    static void pattern7(int n){
+        for(int i = 0; i < n - i + 1; i++){
+            //space
+            for(int j = 0; j < n-i-1; j++){
+                System.out.print(" ");
+            }
+
+            //star
+            for(int j = 0; j < 2*i+1; j++){
+                System.out.print("*");
+            }
+
+            //space
+            for(int j = 0; j < n-i-1; j++){
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+
 
     public static void main(String[] args) {
 
@@ -112,6 +140,7 @@ public class pattern01 {
         pattern4(5);
         pattern5(5);
         pattern6(5);
+        pattern7(9);
 
 
 
